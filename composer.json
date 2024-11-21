@@ -1,0 +1,16 @@
+{
+	"name": "hrrarya/inventory-pos",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"InventoryPos\\": "includes/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Hridoy Mozumder",
+			"email": "hrrarya6@gmail.com"
+		}
+	],
+	"require": {}
+}
