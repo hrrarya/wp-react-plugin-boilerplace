@@ -1,6 +1,6 @@
 <?php
 
-namespace InventoryPos\Admin;
+namespace ReplaceLinks\Admin;
 
 class Menu {
     /**
@@ -17,19 +17,12 @@ class Menu {
 	 */
 	public function admin_menu()
 	{
-		add_menu_page(
-			'Inventory & POS',
-			'Inventory & POS',
-			// 'access_inventory_pos',
-			'manage_options',
-			INVENTORYPOS_SLUG,
-			[$this, 'load_main_template'],
-			'dashicons-store',
-			30
+		add_submenu_page( 
+			'options-general.php', 'Replace Links', 'Replace Links', 'manage_options', 'hrrr-replace-links', array(&$this, 'load_main_template')
 		);
 	}
 	public function load_main_template()
 	{
-		echo '<div id="inventoryposbody" class="inventorypos-body"></div>';
+		echo '<div id="hrrr-replacelinks-body" class="hrrr-replace-links-body"></div>';
 	}
 }

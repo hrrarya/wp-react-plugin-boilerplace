@@ -1,9 +1,9 @@
 {
-	"name": "hrrarya/inventory-pos",
+	"name": "hrrarya/replace-links",
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"InventoryPos\\": "includes/"
+			"ReplaceLinks\\": "includes/"
 		}
 	},
 	"authors": [

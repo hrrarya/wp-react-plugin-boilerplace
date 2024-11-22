@@ -1,21 +1,18 @@
 <?php
 
-namespace InventoryPos;
+namespace ReplaceLinks;
 
 class Admin {
     public function __construct() {
-        $this->add_roles();
         $this->add_menu();
-        $this->add_scripts();
+        $this->add_assets();
     }
 
-    public function add_menu() {
+    private function add_menu(){
         new Admin\Menu;
     }
-    public function add_scripts() {
+
+    private function add_assets(){
         new Admin\Assets;
-    }
-    public function add_roles() {
-        new Admin\Role;
     }
 }
