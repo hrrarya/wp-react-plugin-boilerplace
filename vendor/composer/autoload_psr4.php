@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'InventoryPos\\' => array($baseDir . '/includes'),
+    'ReplaceLinks\\' => array($baseDir . '/includes'),
 );
