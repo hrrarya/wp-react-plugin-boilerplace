@@ -1,15 +1,15 @@
 <?php
 /*
- * Plugin Name:		Main Plugin
+ * Plugin Name:		PLUGIN_NAME
  * Plugin URI:		
- * Description:		Replace your existing broken links in posts & pages in a better way.
+ * Description:		PLUGIN_DESCRIPTION
  * Version:			1.00
- * Author:			Hridoy
+ * Author:			AUTHOR_NAME
  * Author URI:		
  * License:			GPL-3.0+
  * License URI:		http://www.gnu.org/licenses/gpl-3.0.txt
  * Author URI:		
- * Text Domain:		main-plugin
+ * Text Domain:		TEXT_DOMAIN
  * Domain Path:		/languages
  */
 
@@ -30,7 +30,7 @@ if (!class_exists('MainPlugin')) {
             register_activation_hook(__FILE__, [$this, 'activate']);
             register_deactivation_hook(__FILE__, [$this, 'deactivate']);
             add_action('init', [$this, 'on_plugins_loaded']);
-            add_action('replace_links_loaded', [$this, 'init_plugin']);
+            add_action('main_plugin_loaded', [$this, 'init_plugin']);
         }
 
 
@@ -49,16 +49,11 @@ if (!class_exists('MainPlugin')) {
             /**
              * Defines CONSTANTS for Whole plugins.
              */
-            define('MAINPLUGIN_SLUG', 'inventory-pos');
-            define('MAINPLUGIN_PLUGIN_ROOT_URI', plugins_url('/', __FILE__));
-            define('MAINPLUGIN_ROOT_DIR_PATH', plugin_dir_path(__FILE__));
-            define('MAINPLUGIN_ASSETS_DIR_PATH', MAINPLUGIN_ROOT_DIR_PATH . 'assets/');
-            define('MAINPLUGIN_ASSETS_URI', MAINPLUGIN_PLUGIN_ROOT_URI . 'assets/');
-        }
-
-        public function upload_dir_path()
-        {
-            // $this->upload_dir = wp_get_upload_dir();
+            define('CONSTANT_PREFIX_SLUG', 'TEXT_DOMAIN');
+            define('CONSTANT_PREFIX_PLUGIN_ROOT_URI', plugins_url('/', __FILE__));
+            define('CONSTANT_PREFIX_ROOT_DIR_PATH', plugin_dir_path(__FILE__));
+            define('CONSTANT_PREFIX_ASSETS_DIR_PATH', CONSTANT_PREFIX_ROOT_DIR_PATH . 'assets/');
+            define('CONSTANT_PREFIX_ASSETS_URI', CONSTANT_PREFIX_PLUGIN_ROOT_URI . 'assets/');
         }
 
 

@@ -10,11 +10,11 @@ class Assets {
 
     public function plugin_scripts($hook) {
         if( in_array($hook, $this->pages) ){
-            $dependencies = include_once REPLACELINKS_ASSETS_DIR_PATH . 'js/main-plugin.core.min.asset.php';
-            wp_enqueue_style('main-plugin-admin', REPLACELINKS_ASSETS_URI . 'css/main-plugin.css', [], $dependencies['version'], 'all');
+            $dependencies = include_once CONSTANT_PREFIX_ASSETS_DIR_PATH . 'js/main-plugin.core.min.asset.php';
+            wp_enqueue_style('main-plugin-admin', CONSTANT_PREFIX_ASSETS_URI . 'css/main-plugin.css', [], $dependencies['version'], 'all');
             wp_enqueue_script(
                 'main-plugin',
-                REPLACELINKS_ASSETS_URI . 'js/main-plugin.core.min.js',
+                CONSTANT_PREFIX_ASSETS_URI . 'js/main-plugin.core.min.js',
                 array_merge($dependencies['dependencies'], ['regenerator-runtime']),
                 $dependencies['version'],
                 true

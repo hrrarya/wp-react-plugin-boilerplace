@@ -18,11 +18,11 @@ class Menu {
 	public function admin_menu()
 	{
 		add_submenu_page( 
-			'options-general.php', 'Main Plugin', 'Main Plugin', 'manage_options', 'main-plugin', array(&$this, 'load_main_template')
+			'options-general.php', 'PLUGIN_NAME', 'PLUGIN_NAME', 'manage_options', 'TEXT_DOMAIN', array(&$this, 'load_main_template')
 		);
 	}
 	public function load_main_template()
 	{
-		echo '<div id="main-plugin-body" class="main-plugin-body"></div>';
+		echo '<div id="TEXT_DOMAIN-body" class="TEXT_DOMAIN-body"></div>';
 	}
 }
