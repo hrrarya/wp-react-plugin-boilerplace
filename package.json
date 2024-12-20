@@ -1,7 +1,7 @@
 {
-	"name": "main-plugin",
+	"name": "TEXT_DOMAIN",
 	"version": "1.0.0",
-	"description": "Main Plugin",
+	"description": "PLUGIN_NAME",
 	"main": "index.js",
 	"scripts": {
 		"build": "wp-scripts build --mode=production",

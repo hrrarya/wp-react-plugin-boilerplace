@@ -5,7 +5,7 @@ const path = require("path");
 const config = {
 	...defaultConfig,
 	entry: {
-		"main-plugin.core.min": path.resolve(__dirname, "react_app/index.js"),
+		"TEXT_DOMAIN.core.min": path.resolve(__dirname, "react_app/index.js"),
 	},
 	output: {
 		path: path.resolve(__dirname, "assets/js"),

@@ -1,5 +1,5 @@
 {
-	"name": "hrrarya/main-plugin",
+	"name": "hrrarya/TEXT_DOMAIN",
 	"type": "project",
 	"autoload": {
 		"psr-4": {
