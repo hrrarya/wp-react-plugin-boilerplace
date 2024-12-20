@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name:		Replace Links
+ * Plugin Name:		Main Plugin
  * Plugin URI:		
  * Description:		Replace your existing broken links in posts & pages in a better way.
  * Version:			1.00
@@ -9,7 +9,7 @@
  * License:			GPL-3.0+
  * License URI:		http://www.gnu.org/licenses/gpl-3.0.txt
  * Author URI:		
- * Text Domain:		hrrr-replace-links
+ * Text Domain:		main-plugin
  * Domain Path:		/languages
  */
 
@@ -21,8 +21,8 @@ if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
-if (!class_exists('ReplaceLinks')) {
-    final class ReplaceLinks
+if (!class_exists('MainPlugin')) {
+    final class MainPlugin
     {
         private function __construct()
         {
@@ -49,11 +49,11 @@ if (!class_exists('ReplaceLinks')) {
             /**
              * Defines CONSTANTS for Whole plugins.
              */
-            define('REPLACELINKS_SLUG', 'inventory-pos');
-            define('REPLACELINKS_PLUGIN_ROOT_URI', plugins_url('/', __FILE__));
-            define('REPLACELINKS_ROOT_DIR_PATH', plugin_dir_path(__FILE__));
-            define('REPLACELINKS_ASSETS_DIR_PATH', REPLACELINKS_ROOT_DIR_PATH . 'assets/');
-            define('REPLACELINKS_ASSETS_URI', REPLACELINKS_PLUGIN_ROOT_URI . 'assets/');
+            define('MAINPLUGIN_SLUG', 'inventory-pos');
+            define('MAINPLUGIN_PLUGIN_ROOT_URI', plugins_url('/', __FILE__));
+            define('MAINPLUGIN_ROOT_DIR_PATH', plugin_dir_path(__FILE__));
+            define('MAINPLUGIN_ASSETS_DIR_PATH', MAINPLUGIN_ROOT_DIR_PATH . 'assets/');
+            define('MAINPLUGIN_ASSETS_URI', MAINPLUGIN_PLUGIN_ROOT_URI . 'assets/');
         }
 
         public function upload_dir_path()
@@ -64,7 +64,7 @@ if (!class_exists('ReplaceLinks')) {
 
         public function on_plugins_loaded()
         {
-            do_action('replace_links_loaded');
+            do_action('main_plugin_loaded');
         }
 
         /**
@@ -75,7 +75,7 @@ if (!class_exists('ReplaceLinks')) {
         public function init_plugin()
         {
             if (is_admin()) {
-                new ReplaceLinks\Admin();
+                new MainPlugin\Admin();
             }
         }
 
@@ -97,15 +97,15 @@ if (!class_exists('ReplaceLinks')) {
 /**
  * Initializes the main plugin
  *
- * @return \ReplaceLinks
+ * @return \MainPlugin
  */
-if (!function_exists('ReplaceLinks_Start')) {
-    function ReplaceLinks_Start()
+if (!function_exists('MainPlugin_Start')) {
+    function MainPlugin_Start()
     {
-        return ReplaceLinks::init();
+        return MainPlugin::init();
 
     }
 }
 
 // Plugin Start
-ReplaceLinks_Start();
+MainPlugin_Start();

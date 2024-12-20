@@ -1,7 +1,7 @@
 {
-	"name": "replace-links",
+	"name": "main-plugin",
 	"version": "1.0.0",
-	"description": "Replace Links",
+	"description": "Main Plugin",
 	"main": "index.js",
 	"scripts": {
 		"build": "wp-scripts build --mode=production",
@@ -17,9 +17,6 @@
 		"start": "wp-scripts start --mode=development",
 		"test:e2e": "wp-scripts test-e2e",
 		"test:unit": "wp-scripts test-unit-js",
-		"zip": "rm -rf betterlinks ../betterlinks.*.zip && wp dist-archive .",
-		"build-style": "gulp build-style",
-		"make-pot": "cp languages/betterlinks.pot languages/betterlinks.pot~~ && wp i18n make-pot . languages/betterlinks.pot"
 	},
 	"author": "hrrarya",
 	"dependencies": {

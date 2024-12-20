@@ -1,9 +1,9 @@
 {
-	"name": "hrrarya/replace-links",
+	"name": "hrrarya/main-plugin",
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"ReplaceLinks\\": "includes/"
+			"MainPlugin\\": "includes/"
 		}
 	},
 	"authors": [

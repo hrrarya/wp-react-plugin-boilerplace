@@ -1,6 +1,6 @@
 <?php
 
-namespace ReplaceLinks;
+namespace MainPlugin;
 
 class Admin {
     public function __construct() {

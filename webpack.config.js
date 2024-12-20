@@ -5,7 +5,7 @@ const path = require("path");
 const config = {
 	...defaultConfig,
 	entry: {
-		"replace-links.core.min": path.resolve(__dirname, "react_app/index.js"),
+		"main-plugin.core.min": path.resolve(__dirname, "react_app/index.js"),
 	},
 	output: {
 		path: path.resolve(__dirname, "assets/js"),
