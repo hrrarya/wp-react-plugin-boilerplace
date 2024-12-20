@@ -16,7 +16,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"start": "wp-scripts start --mode=development",
 		"test:e2e": "wp-scripts test-e2e",
-		"test:unit": "wp-scripts test-unit-js",
+		"test:unit": "wp-scripts test-unit-js"
 	},
 	"author": "hrrarya",
 	"dependencies": {
