@@ -1,0 +1,1 @@
+main-plugin.core.min.asset.php
