@@ -1,8 +1,5 @@
-import React from "react";
 import { createRoot } from "react-dom";
-// import { BrowserRouter as Router } from "react-router-dom";
-// import { Provider } from "react-redux";
-import App from "App";
+import App from "./App.jsx";
 import { createHooks } from "@wordpress/hooks";
 window.main_plugin_hooks = createHooks();
 
