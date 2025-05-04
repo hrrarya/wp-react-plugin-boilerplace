@@ -12,6 +12,17 @@ const config = {
 		filename: "[name].js",
 	},
 	plugins: [...defaultConfig.plugins, new CleanWebpackPlugin()],
+	externals: {
+		// Third party dependencies.
+		jquery: "jQuery",
+		react: ["vendor", "React"],
+		"react-dom": ["vendor", "ReactDOM"],
+
+		// WordPress dependencies.
+		"@wordpress/i18n": ["vendor", "wp", "i18n"],
+		"@wordpress/hooks": ["vendor", "wp", "hooks"],
+		"@wordpress/api-fetch": ["vendor", "wp", "apiFetch"],
+	},
 };
 
 module.exports = config;
